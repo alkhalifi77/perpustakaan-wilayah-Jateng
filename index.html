@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pojok Baca Digital 8C - SMPN 15 Semarang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content h1, .header-content h2 {
+            font-family: 'Oswald', sans-serif;
+            margin: 5px 0;
+            text-transform: uppercase;
+        }
+
+        .logo-container {
+            perspective: 1000px;
+            margin-bottom: 10px;
+        }
+
+        .logo-school {
+            width: 100px;
+            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+            animation: rotateY 5s infinite linear;
+        }
+
+        @keyframes rotateY {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* RUNNING TEXT */
+        .marquee {
+            background: #ffd700;
+            color: #000;
+            padding: 5px 0;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        /* PROFILE SECTION */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .identity-table {
+            font-size: 1.1em;
+            border-collapse: collapse;
+        }
+
+        .identity-table td {
+            padding: 8px 10px;
+        }
+
+        /* RECOUNT CONTENT */
+        .recount-content {
+            background-color: #fdf5e6; /* Cream color */
+            padding: 40px;
+            border: 1px solid #e2d3b5;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .recount-content p {
+            text-align: justify;
+            text-indent: 40px;
+            line-height: 1.8;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1em;
+        }
+
+        /* GALLERY AUTO SCROLL */
+        .gallery-wrapper {
+            overflow: hidden;
+            margin: 40px 0;
+            background: #eee;
+            padding: 10px 0;
+            border-radius: 10px;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 15px;
+            animation: scrollGallery 20s linear infinite;
+        }
+
+        .gallery-scroll img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        @keyframes scrollGallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* FEEDBACK SECTION */
+        .feedback-section {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px dashed #ccc;
+        }
+
+        #feedbackArea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-save {
+            background: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-save:hover { background: #3b82f6; }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f3ff;
+            border-left: 5px solid #1e3a8a;
+            display: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="https://i.ibb.co.com/zTBDZkjB/LOGO-SEKOLAH-Photoroom.png" alt="Logo Sekolah" class="logo-school">
+    </div>
+    <div class="header-content">
+        <h1>POJOK BACA DIGITAL 8C</h1>
+        <h1>ENGLISH</h1>
+        <h2>SMP NEGERI 15 SEMARANG</h2>
+        <p>Tahun Ajaran 2025/2026</p>
+    </div>
+</header>
+
+<div class="marquee">
+    <marquee behavior="scroll" direction="right">SMP Negeri 15 Semarang, tiada hari tanpa prestasi.</marquee>
+</div>
+
+<div class="container">
+    <div class="profile-section">
+        <img src="https://i.ibb.co.com/60kRXBbr/Whats-App-Image-2026-02-10-at-13-09-03.jpg" alt="Profile Picture" class="profile-pic">
+        <table class="identity-table">
+            <tr><td><strong>Nama</strong></td><td>: Muchammad Aqila Alkhalifi</td></tr>
+            <tr><td><strong>Kelas</strong></td><td>: 8C</td></tr>
+            <tr><td><strong>No. Absen</strong></td><td>: 20</td></tr>
+            <tr><td><strong>Guru Pengampu</strong></td><td>: Rista</td></tr>
+            <tr><td><strong>Mata Pelajaran</strong></td><td>: English</td></tr>
+        </table>
+    </div>
+
+    <div class="recount-content">
+        <h3 style="text-align: center; font-family: 'Oswald';">My Unforgettable Experience</h3>
+        <p>
+            One week ago, my school organized a special study tour to provincial library in Semarang. We gathered at SMP Negeri 15 Semarang early in the morning, feeling excited about the journey ahead. The weather was bright, and everyone was wearing their uniforms proudly, ready to explore the library heritage.
+        </p>
+        <p>
+            When we arrived, the guide explained the history of the building and give the rules in the library. I was amazed by the many book in library. We took many photos together and Readed every book in the library.
+        </p>
+        <p>
+            After that, We walked around the library. We also go to audio visual room and we wacthed a movie about the library and a horror movie. By the afternoon, we were tired but very happy. This experience taught me a lot about our provincial library and the knowledge after readed a book.
+        </p>
+    </div>
+
+    <h3 style="margin-top: 40px; font-family: 'Oswald'; border-bottom: 2px solid #1e3a8a; display: inline-block;">GALLERY</h3>
+    <div class="gallery-wrapper">
+        <div class="gallery-scroll">
+            <img src="https://i.ibb.co.com/xt1zh0DF/Whats-App-Image-2026-02-10-at-13-11-40.jpg" alt="Gallery 1">
+            <img src="https://i.ibb.co.com/pB64Tbh4/Whats-App-Image-2026-02-10-at-13-11-40-1.jpg" alt="Gallery 2">
+            <img src="https://i.ibb.co.com/5WbPJ6W4/Whats-App-Image-2026-02-10-at-13-12-17.jpg" alt="Gallery 3">
+            <img src="https://i.ibb.co.com/xt1zh0DF/Whats-App-Image-2026-02-10-at-13-11-40.jpg" alt="Gallery 1">
+            <img src="https://i.ibb.co.com/pB64Tbh4/Whats-App-Image-2026-02-10-at-13-11-40-1.jpg" alt="Gallery 2">
+            <img src="https://i.ibb.co.com/5WbPJ6W4/Whats-App-Image-2026-02-10-at-13-12-17.jpg" alt="Gallery 3">
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <h3>Teacher's Feedback</h3>
+        <p>Silakan berikan masukan dan penilaian di bawah ini:</p>
+        <textarea id="feedbackArea" placeholder="Tulis feedback di sini..."></textarea>
+        <br>
+        <button class="btn-save" onclick="saveFeedback()">Save & Send Email</button>
+
+        <div id="resultBox" class="result-box">
+            <strong>Hasil Feedback:</strong>
+            <p id="savedText"></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © Kokurikuler 2026 – SMP Negeri 15 Semarang
+</footer>
+
+<script>
+    function saveFeedback() {
+        const feedback = document.getElementById('feedbackArea').value;
+        if (feedback.trim() === "") {
+            alert("Harap isi feedback terlebih dahulu!");
+            return;
+        }
+
+        // Tampilkan hasil di bawah
+        document.getElementById('savedText').innerText = feedback;
+        document.getElementById('resultBox').style.display = 'block';
+
+        // Kirim via Email (membuka aplikasi email default)
+        const email = "smpn15@semarangkota.go.id";
+        const subject = "Feedback Pojok Baca Digital - Muchammad Aqila Alkhalifi";
+        const body = `Feedback dari Guru: %0D%0A${feedback}`;
+        
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+</script>
+
+</body>
+</html>
